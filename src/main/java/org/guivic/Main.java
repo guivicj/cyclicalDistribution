@@ -1,10 +1,15 @@
 package org.guivic;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int idThread = 1;
-        int counter = 10;
-        int thread = 2;
+        System.out.print("Introduce a positive number: ");
+        int counter = sc.nextInt();
+        System.out.print("Introduce a number of threads: ");
+        int thread = sc.nextInt();
 
         Thread t1 = new CyclicalDistribution(idThread, counter, thread);
         Thread[] threads = new Thread[thread];
